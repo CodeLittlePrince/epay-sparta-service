@@ -2,7 +2,13 @@
   "name": "epay-sparta-service",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "bin": {
+    "epay-sparta-service": "bin/epay-sparta-service.js"
+  },
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +21,56 @@
   ],
   "author": "CodeLittlePrince",
   "license": "ISC",
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "concurrently": "^3.6.1",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "husky": "^3.1.0",
+    "koa-mock-switch": "^1.0.10",
+    "portfinder": "^1.0.19",
+    "semver": "^6.3.0",
+    "vue-style-loader": "^4.1.2",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.4",
+    "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",
+    "autoprefixer": "^7.2.6",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.3",
+    "cross-env": "^5.2.0",
+    "css-loader": "^3.0.0",
+    "eslint": "^6.7.2",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-vue": "^6.0.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "postcss": "^7.0.23",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "stylelint": "^12.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "url-loader": "^3.0.0",
+    "vue-eslint-parser": "^7.0.0",
+    "vue-loader": "^15.7.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2",
+    "webpackbar": "^3.2.0"
+  },
   "bugs": {
     "url": "https://github.com/CodeLittlePrince/epay-sparta-service/issues"
   },
