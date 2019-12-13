@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "node ../bin/epay-sparta-service.js development",
     "prod": "node ../bin/epay-sparta-service.js production",
-    "analyze": "node ../bin/epay-sparta-service.js production ANALYZE=active",
-    "online": "node ../bin/epay-sparta-service.js production ONLINE=active",
-    "test": "node ../bin/epay-sparta-service.js test"
+    "analyze": "node ../bin/epay-sparta-service.js production --analyze",
+    "online": "node ../bin/epay-sparta-service.js production --online",
+    "test:unit": "node ../bin/epay-sparta-service.js test:unit",
+    "test:e2e": "node ../bin/epay-sparta-service.js test:e2e"
   },
   "author": "",
   "license": "ISC",

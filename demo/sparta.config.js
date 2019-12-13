@@ -17,5 +17,8 @@ module.exports = {
     //     template: 'src/index.html'
     //   }),
     // ]
+  },
+  karmaConfig: {
+    basePath: ''
   }
 }

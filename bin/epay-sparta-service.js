@@ -1,8 +1,8 @@
 const semver = require('semver')
 const minimist = require('minimist')
-const { error } = require('../lib/utils')
 const requiredVersion = require('../package.json').engines.node
 const Service = require('../lib/index')
+const { error } = require('../lib/utils')
 
 validateNodeVersion()
 start()
