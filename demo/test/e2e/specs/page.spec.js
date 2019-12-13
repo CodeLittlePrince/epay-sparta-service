@@ -14,7 +14,7 @@ describe('pages', () => {
     this.timeout('30s')
     nightmare
       .viewport(1200, 600)
-      .goto(url || 'http://localhost:8082')
+      .goto(url || 'http://localhost:8080')
       .wait('h1')
       .click('a[href="#/pageA"]')
       .wait(() => {
