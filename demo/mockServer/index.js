@@ -1,5 +1,5 @@
 const path = require('path')
-const mockRoot = path.join(__dirname, '../mock')
+const mockRoot = path.join(__dirname, './mockData')
 const KoaMockSwitch = require('koa-mock-switch')
 const mockSwitchMap = require('./mockSwitchMap')
 const mock = new KoaMockSwitch({

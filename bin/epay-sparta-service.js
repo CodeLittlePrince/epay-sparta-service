@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const semver = require('semver')
 const minimist = require('minimist')
 const requiredVersion = require('../package.json').engines.node

@@ -9,14 +9,14 @@ module.exports = {
         template: 'src/index.html'
       }
     ],
-    publicPath: '/',
+    publicPath: process.env.NODE_ENV === 'production'
+      ? '//epay.cdn.com'
+      : '/',
   },
   devServer: {
     proxy: [{
       context: ['/api', '/mock-switch'],
       target: 'http://localhost:7777',
-      secure: false,
-      changeOrigin: true
     }],
     historyApiFallback: true,
   },
