@@ -2,7 +2,7 @@
   <div class="home">
     <div class="content jello">
       <h1 v-directive-sample:arg="'msg'">
-        {{ `Vue` | filterSample('之脚手架zz') }}
+        {{ `Vue` | filterSample('之脚手架') }}
         <span>- by 咻</span>
       </h1>
       <a
@@ -30,7 +30,7 @@ export default {
     // ajax get data
     // this.$ajax.post('/home/hello', { page: 7 }) // FOR POST
     this.$ajax.get(
-      '/home/hello',
+      '/api/home/hello',
       { page: 7 }
     ).then(res => {
       console.log(`%c${res.msg}`, 'color: blue')
@@ -39,7 +39,7 @@ export default {
     })
     // ajax get data
     this.$ajax.get(
-      '/home/kitty'
+      '/api/home/kitty'
     ).catch(err => {
       console.error(err.text)
     })
