@@ -4,8 +4,9 @@
   "description": "",
   "main": "epay-sparta.config.js",
   "scripts": {
-    "dev": "node ../bin/epay-sparta-service.js development",
+    "watch": "node ../bin/epay-sparta-service.js development",
     "mock": "nodemon -q ./mockServer/index.js",
+    "dev": "concurrently \"npm run mock\" \"npm run watch\" --kill-others",
     "prod": "node ../bin/epay-sparta-service.js production",
     "analyze": "node ../bin/epay-sparta-service.js production --analyze",
     "online": "node ../bin/epay-sparta-service.js production --online",
