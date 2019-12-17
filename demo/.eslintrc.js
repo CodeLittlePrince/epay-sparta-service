@@ -4,5 +4,5 @@ module.exports = {
     "node": true,
     "es6": true
   },
-  ...require('../lib/config/.eslintrc.js')
+  ...require('../lib/config/eslint.config')
 }
