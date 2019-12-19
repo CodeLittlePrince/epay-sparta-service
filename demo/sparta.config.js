@@ -22,6 +22,6 @@ module.exports = {
   },
   // 参照karma配置文档 http://karma-runner.github.io/4.0/config/configuration-file.html
   karma: {
-    basePath: ''
+    browsers: ['Chrome']
   }
 }
