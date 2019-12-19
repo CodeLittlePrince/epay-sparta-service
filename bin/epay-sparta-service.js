@@ -37,9 +37,16 @@ function getArgsFromCommondLine() {
   return args
 }
 
+/**
+ * Sometimes user need set process.env to command cli:
+ * `npm run prod AMAZING=WOO` and use AMAZING in user's code
+ * e.g.
+ * if (process.env.AMAZING === 'WOO') {}
+ * @param {array} processEnvSegments
+ */
 function applyProcessEnv(processEnvSegments) {
   processEnvSegments.forEach(segment => {
-    if (validateSegment(segment)) {
+    if (validateSegmentFormat(segment)) {
       const kv = segment.split('=')
       const key = kv[0]
       const value = kv[1]
@@ -51,6 +58,6 @@ function applyProcessEnv(processEnvSegments) {
   })
 }
 
-function validateSegment(segment) {
+function validateSegmentFormat(segment) {
   return /.+=.+/.test(segment)
 }
