@@ -23,6 +23,7 @@
     "vuex": "^3.1.2"
   },
   "devDependencies": {
+    "@epay-sparta/cli-plugin-unit-test": "0.0.2",
     "concurrently": "^5.0.1",
     "karma-chrome-launcher": "^3.1.0",
     "koa-mock-switch": "^1.0.11",

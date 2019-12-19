@@ -1,6 +1,5 @@
 const Nightmare = require('nightmare')
-const chai = require('chai')
-const expect = chai.expect
+const { expect } = require('chai')
 const nightmare = Nightmare({
   show: true
 })

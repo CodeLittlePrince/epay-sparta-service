@@ -8,7 +8,7 @@ const PageA = () => import(/* webpackChunkName: "pageA" */ '../pages/pageA')
 const PageB = () => import(/* webpackChunkName: "pageB" */ '../pages/pageB')
 
 export default new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {
       path: '/',

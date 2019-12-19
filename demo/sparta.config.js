@@ -18,7 +18,7 @@ module.exports = {
       context: ['/api', '/mock-switch'],
       target: 'http://localhost:7777',
     }],
-    historyApiFallback: true,
+    historyApiFallback: false,
   },
   // 参照karma配置文档 http://karma-runner.github.io/4.0/config/configuration-file.html
   karma: {
