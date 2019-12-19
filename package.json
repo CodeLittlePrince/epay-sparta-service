@@ -10,7 +10,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "cross-env eslint --ext .js ./lib/"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,18 @@
   ],
   "author": "CodeLittlePrince",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeLittlePrince/epay-sparta-service/issues"
+  },
+  "homepage": "https://github.com/CodeLittlePrince/epay-sparta-service#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "devDependencies": {
-    
+    "cross-env": "^6.0.3",
+    "husky": "^3.1.0"
   },
   "dependencies": {
     "@babel/core": "^7.7.4",
@@ -40,7 +50,6 @@
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.3",
-    "cross-env": "^5.2.0",
     "css-loader": "^3.0.0",
     "eslint": "^6.7.2",
     "eslint-loader": "^3.0.2",
@@ -86,9 +95,5 @@
     "sinon-chai": "^3.3.0",
     "babel-plugin-istanbul": "^5.2.0",
     "nightmare": "^3.0.2"
-  },
-  "bugs": {
-    "url": "https://github.com/CodeLittlePrince/epay-sparta-service/issues"
-  },
-  "homepage": "https://github.com/CodeLittlePrince/epay-sparta-service#readme"
+  }
 }
