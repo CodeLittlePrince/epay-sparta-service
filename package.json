@@ -1,6 +1,6 @@
 {
-  "name": "epay-sparta-service",
-  "version": "0.0.4",
+  "name": "@epay-sparta/cli-service",
+  "version": "0.0.1",
   "description": "",
   "engines": {
     "node": ">=8"
