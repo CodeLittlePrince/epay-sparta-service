@@ -3,7 +3,10 @@
  */
 import * as dom from 'common/js/utils/dom.js'
 
-// const expect = require('chai').expect 装过sinon-chai就不需要这句了;sinon同理 - 此功能得益于karma的frameworks
+const chai = require('chai')
+const sinon = require('sinon')
+const expect = chai.expect
+chai.use(require('sinon-chai'))
 
 describe('utils/dom', () => {
   // 测试hasClass
