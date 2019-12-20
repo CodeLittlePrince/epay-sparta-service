@@ -1,4 +1,5 @@
 module.exports = {
+  favicon: 'favicon.ico',
   webpack: {
     entry: {
       app: ['src/index.js']
