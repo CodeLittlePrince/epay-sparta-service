@@ -14,7 +14,11 @@
     "test:e2e": "node ../bin/epay-sparta-service.js test:e2e",
     "lint": "node ../bin/epay-sparta-service.js lint"
   },
-  "author": "",
+  "author": {
+    "name": "子咻",
+    "email": "1006312908@qq.com",
+    "url": "https://github.com/CodeLittlePrince"
+  },
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
@@ -23,6 +27,7 @@
     "vuex": "^3.1.2"
   },
   "devDependencies": {
+    "@epay-sparta/cli-plugin-e2e-test": "0.0.1",
     "@epay-sparta/cli-plugin-unit-test": "0.0.2",
     "concurrently": "^5.0.1",
     "karma-chrome-launcher": "^3.1.0",

@@ -1,6 +1,6 @@
 {
   "name": "@epay-sparta/cli-service",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "engines": {
     "node": ">=8"
@@ -79,7 +79,6 @@
     "semver": "^6.3.0",
     "vue-style-loader": "^4.1.2",
     "webpack-bundle-analyzer": "^3.6.0",
-    "webpack-dev-server": "^3.9.0",
-    "nightmare": "^3.0.2"
+    "webpack-dev-server": "^3.9.0"
   }
 }
