@@ -1,6 +1,7 @@
 module.exports = [
   // 主页-hello 用到了运行时控制success和error
   {
+    desc: 'Hello Kitty',
     url: '/api/home/hello',
     selections: [
       {
