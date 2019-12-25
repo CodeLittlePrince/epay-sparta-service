@@ -1,3 +1,5 @@
+const proxyServerConfig = require('./config/proxyServer')
+
 module.exports = {
   favicon: 'favicon.ico',
   webpack: {
@@ -17,7 +19,7 @@ module.exports = {
   devServer: {
     proxy: [{
       context: ['/api', '/mock-switch'],
-      target: 'http://localhost:7777',
+      target: `http://localhost:${proxyServerConfig.port}`
     }],
     historyApiFallback: false,
   },

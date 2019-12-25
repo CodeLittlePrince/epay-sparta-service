@@ -1,10 +1,11 @@
+const proxyServerConfig = require('../config/proxyServer')
 const path = require('path')
 const mockRoot = path.join(__dirname, './mockData')
 const KoaMockSwitch = require('koa-mock-switch')
 const mockSwitchMap = require('./mockSwitchMap')
 const mock = new KoaMockSwitch({
   root: mockRoot,
-  port: 7777,
+  port: proxyServerConfig.port,
   switchMap: mockSwitchMap,
   apiPrefix: '/api',
   apiSuffix: '.json'
