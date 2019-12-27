@@ -5,6 +5,11 @@
         {{ `Vue` | filterSample('之脚手架') }}
         <span>- by 咻</span>
       </h1>
+      <div class="pictures">
+        <img :src="apple" alt="">
+        <img src="./img/KFC.svg" alt="">
+        <img src="./img/starbucks.svg" alt="">
+      </div>
       <a
         href="https://github.com/CodeLittlePrince/blog"
         target="__blank"
@@ -16,6 +21,7 @@
 </template>
 
 <script>
+import apple from './img/apple__base64.svg'
 import mixinsSample from 'mixins/sample'
 import { mapGetters, mapActions } from 'vuex'
 
@@ -24,7 +30,10 @@ export default {
   computed: {
     ...mapGetters([
       'name'
-    ])
+    ]),
+    apple() {
+      return apple
+    }
   },
   mounted() {
     // ajax get data
@@ -91,6 +100,13 @@ export default {
       overflow: hidden;
       @include bg-image('~common/img/home');
       background-size: contain;
+    }
+
+    .pictures {
+      img {
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 }
