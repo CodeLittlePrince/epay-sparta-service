@@ -7,7 +7,7 @@
       </h1>
       <div class="pictures">
         <img :src="apple" alt="">
-        <img src="./img/KFC.svg" alt="">
+        <img src="./img/KFC__sprite.svg" alt="">
         <img src="./img/starbucks.svg" alt="">
       </div>
       <a
