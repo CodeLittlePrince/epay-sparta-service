@@ -4,11 +4,9 @@
 // 社区中也有很多遇到这问题的，即使连vue-cli也用了babel插件的方法来修复这个问题，
 // 所以，在这手动引入。
 // 资料：
-// https://github.com/vuejs/vue-cli/issues/1642
 // https://github.com/vuejs/vue-cli/commit/bda6dea705e2756aa21180b8d58cbae968f60a1d
-// https://github.com/vuejs/vue-cli/blob/dev/packages/@vue/babel-preset-app/index.js
-// https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/babel-preset-app/polyfillsPlugin.js
-import 'core-js/modules/es6.array.iterator.js'
+// https://github.com/babel/babel/issues/9872
+import 'core-js/modules/es.array.iterator.js'
 
 import 'common/scss/index'
 import Vue from 'vue'
