@@ -1,3 +1,13 @@
 module.exports = {
-  ...require('../lib/config/babel.config')
+  ...require('../lib/config/babel.config'),
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          esmodules: true
+        },
+      },
+    ],
+  ],
 }

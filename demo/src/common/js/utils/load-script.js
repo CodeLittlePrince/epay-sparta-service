@@ -11,7 +11,6 @@
  * @returns {Promise} Promise实例
  */
 
-/* istanbul ignore next */
 function loadScript(path, options = {}) {
   return new Promise((resolve, reject) => {
     if (typeof path !== 'string') {
