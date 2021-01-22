@@ -11,7 +11,6 @@
  * @returns {Promise} Promise实例
  */
 
-/* istanbul ignore next */
 function loadScript(path, options = {}) {
   return new Promise((resolve, reject) => {
     if (typeof path !== 'string') {
@@ -19,7 +18,7 @@ function loadScript(path, options = {}) {
         Promise.all(path.map(p => loadScript(p, options))).then(resolve).catch(reject)
         return
       }
-      reject()
+      reject('js path format error')
       return
     }
     const script = document.createElement('script')
