@@ -1,33 +1,43 @@
-const Nightmare = require('nightmare')
+const puppeteer = require('puppeteer-core')
 const { expect } = require('chai')
-const nightmare = Nightmare({
-  show: true
-})
-// 运行npm run test:e2e http://0.0.0.0:9999
-// 则测试页面就为http://0.0.0.0:9999
-const url = process.argv[3]
+const chromePaths = require('chrome-paths')
 
-describe('pages', () => {
-  it('page ', function(done) {
-    // 设定整个模拟的时长，超过则GG
-    this.timeout('30s')
-    nightmare
-      .viewport(1200, 600)
-      .goto(url || 'http://localhost:8080')
-      .wait('h1')
-      .click('a[href="#/pageA"]')
-      .wait(() => {
-        return location.hash === '#/pageA'
-      })
-      .click('a[href="#/pageB"]')
-      .wait(() => {
-        return location.hash === '#/pageB'
-      })
-      .evaluate(() => location.hash)
-      .end()
-      .then(hash => {
-        expect(hash).to.equal('#/pageB')
-        done()
-      })
+const CHROME_PATH = chromePaths.chrome
+
+describe('pages', function() {
+  let browser
+  let page
+
+  this.timeout('30s')
+
+  before(async () => {
+    browser = await puppeteer.launch({
+      ignoreHTTPSErrors: true,
+      headless: false,
+      slowMo: 100,
+      defaultViewport: {
+        width: 1200,
+        height: 500,
+      },
+      executablePath: CHROME_PATH,
+    })
+
+    page = await browser.newPage()
+    await page.goto('http://localhost:8081')
+  })
+
+  after(async () => {
+    await browser.close()
+  })
+
+  it('page title', async () => {
+    await page.waitForSelector('h1')
+    await page.click('a[href="/pageA"]')
+    await page.waitForFunction(() => location.pathname === '/pageA')
+    await page.click('a[href="/pageB"]')
+    await page.waitForFunction(() => location.pathname === '/pageB')
+    const pathname = await page.evaluate(() => location.pathname)
+
+    expect(pathname).to.equal('/pageB')
   })
 })
